@@ -72,7 +72,7 @@ const steps = [
 ];
 
 function Brand() {
-  return <a className="brand" href="#top" aria-label="LEHASTR — на главную"><span className="brand-mark">L</span><span className="brand-text">LEHA<span>STR</span></span></a>;
+  return <a className="brand" href="#top"><span className="brand-mark" aria-hidden="true">L</span><span className="brand-text">LEHA<span>STR</span></span></a>;
 }
 
 function App() {
@@ -182,7 +182,7 @@ function App() {
           <div className="section-heading"><div><div className="section-kicker"><span>02</span> Видео и моменты</div><h2>ПОСЛЕДНИЕ<br /><span>ВЫПУСКИ.</span></h2></div><div className="video-heading-links"><a className="text-link" href="https://www.youtube.com/@Leha_STR/videos" target="_blank" rel="noreferrer">Все выпуски <ArrowUpRight size={18} /></a><a className="text-link" href="https://www.youtube.com/channel/UC2qDQ6o1ZWATo1Sr_7lzCcg" target="_blank" rel="noreferrer">Моменты <ArrowUpRight size={18} /></a></div></div>
           <div className="video-grid">
             {videos.map((video, index) => <article className="video-card" key={video.id}>
-              <button className="video-image" onClick={() => setActiveVideo(video)} aria-label={`Смотреть: ${video.title}`}><img src={video.image} alt="" /><span className="video-tag">{video.tag}</span><span className="video-index">0{index + 1}</span><span className="play-button"><Play size={25} fill="currentColor" /></span></button>
+              <button className="video-image" onClick={() => setActiveVideo(video)}><img src={video.image} alt="" /><span className="video-tag">{video.tag}</span><span className="video-index">0{index + 1}</span><span className="play-button" aria-hidden="true"><Play size={25} fill="currentColor" /></span><span className="sr-only">Смотреть: {video.title}</span></button>
               <div className="video-meta"><h3>{video.title}</h3><p>{video.caption}</p></div>
             </article>)}
           </div>
