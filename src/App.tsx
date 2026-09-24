@@ -45,6 +45,8 @@ const games = [
   { id: 'kenshi', short: 'KS', name: 'Kenshi', tagline: 'Жестокий мир и полная свобода выбора.', description: 'Начать почти с нуля и выбрать свой путь: от торговли и разведки до армии и собственного поселения.', detail: 'Выживание · Свобода · Без скрипта' },
   { id: 'victoria', short: 'V3', name: 'Victoria 3', tagline: 'Экономика, общество и спор о будущем.', description: 'Сложная экономика, реформы и конфликт интересов разных групп населения.', detail: 'Экономика · Реформы · Общество' },
   { id: 'hoi4', short: 'HOI4', name: 'Hearts of Iron IV', tagline: 'Индустриальная война и альтернативная история.', description: 'Стратегический слой, производство, технологии и большие идеи, переписанные вручную.', detail: 'Война · Технологии · Альтернативы' },
+  { id: 'hearthstone', short: 'HS', name: 'Hearthstone', tagline: 'Карты, удача и решения на рубеже хода.', description: 'Коллекционная карточная игра про подготовку, темп и точный расчёт: заранее собрать план и использовать момент, когда он появляется.', detail: 'Карты · Темп · Решения' },
+  { id: 'dota2', short: 'DOTA 2', name: 'Dota 2', tagline: 'Соревновательная стратегия без права на ошибку.', description: 'Линии, экономика, карта и командная игра. Здесь важны не только отдельные решения, но и то, насколько быстро команда адаптируется к противнику.', detail: 'Командная игра · Экономика · Карта' },
 ];
 
 const directions = [
@@ -147,13 +149,13 @@ function App() {
           <div className="hero-grid" aria-hidden="true" />
           <div className="hero-copy">
             <div className="eyebrow"><span className="status-dot" /> LehaSTR · @Leha_STR</div>
-            <h1>СТРАТЕГИИ.<br /><span>ИСТОРИИ.</span><br />ПОЛНЫЙ ХАОС.</h1>
-            <p className="hero-lead">LehaSTR — игровой канал про большие планы, альтернативную историю и моменты, которые невозможно спланировать.</p>
+            <h1>СТРАТЕГИИ.<br /><span>БРЕЙНРОУТ.</span><br />АЛАБУГА.</h1>
+            <p className="hero-lead">Канал о юморе, стратегиях и аниме. Сложные игры, неожиданные решения и истории о том, как брейнроут каждый раз меняет план.</p>
             <div className="hero-actions">
               <button className="primary-button" onClick={() => setActiveVideo(videos[0])}><Play size={18} fill="currentColor" /> Смотреть выпуск</button>
               <a className="outline-button" href="#alabuga">Про Алабугу <ArrowDown size={18} /></a>
             </div>
-            <div className="hero-metrics"><span><b>5</b> игр в фокусе</span><i /><span><b>YouTube</b> выпуски</span><i /><span><b>Twitch</b> эфиры</span></div>
+            <div className="hero-metrics"><span><b>7</b> игр в фокусе</span><i /><span><b>YouTube</b> выпуски</span><i /><span><b>Twitch</b> эфиры</span></div>
           </div>
 
           <div className="hero-visual">
@@ -161,20 +163,20 @@ function App() {
               <div className="portrait-top"><span>LEHASTR</span><span>RU</span></div>
               <img src={`${import.meta.env.BASE_URL}assets/leha-avatar.jpg`} alt="Аватар LehaSTR" />
               <div className="portrait-caption"><span>LEHA</span><strong>STR</strong></div>
-              <div className="portrait-status"><CircleDot size={14} /> КАНАЛ О СЛОЖНЫХ ИГРАХ</div>
+              <div className="portrait-status"><CircleDot size={14} /> ЮМОР · СТРАТЕГИИ · АНИМЕ</div>
             </div>
-            <div className="floating-chip chip-games"><Gamepad2 size={18} /><span>ИГРЫ</span><b>05</b></div>
+            <div className="floating-chip chip-games"><Gamepad2 size={18} /><span>ИГРЫ</span><b>07</b></div>
             <div className="floating-chip chip-alabuga"><GraduationCap size={19} /><span>АЛАБУГА</span><b>ПОЛИТЕХ</b></div>
           </div>
         </section>
 
-        <div className="ticker"><div className="ticker-track"><span>EUROPA UNIVERSALIS</span><i>✦</i><span>KENSHI</span><i>✦</i><span>VICTORIA 3</span><i>✦</i><span>HOI4</span><i>✦</i><span>АЛАБУГА ПОЛИТЕХ</span><i>✦</i><span>EUROPA UNIVERSALIS</span><i>✦</i><span>KENSHI</span><i>✦</i><span>VICTORIA 3</span><i>✦</i><span>HOI4</span><i>✦</i><span>АЛАБУГА ПОЛИТЕХ</span><i>✦</i></div></div>
+        <div className="ticker"><div className="ticker-track"><span>EUROPA UNIVERSALIS</span><i>✦</i><span>KENSHI</span><i>✦</i><span>VICTORIA 3</span><i>✦</i><span>HOI4</span><i>✦</i><span>DOTA 2</span><i>✦</i><span>HEARTHSTONE</span><i>✦</i><span>АЛАБУГА ПОЛИТЕХ</span><i>✦</i><span>EUROPA UNIVERSALIS</span><i>✦</i><span>KENSHI</span><i>✦</i><span>VICTORIA 3</span><i>✦</i><span>HOI4</span><i>✦</i><span>DOTA 2</span><i>✦</i><span>HEARTHSTONE</span><i>✦</i><span>АЛАБУГА ПОЛИТЕХ</span><i>✦</i></div></div>
 
         <section className="section intro-section">
           <div className="section-kicker"><span>01</span> О проекте</div>
           <div className="intro-grid">
-            <h2>ЗДЕСЬ НЕ ОБЪЯСНЯЮТ,<br />КАК <em>ПОБЕДИТЬ.</em></h2>
-            <div className="intro-copy"><p>Канал о стратегиях, экономике, политике и альтернативной истории. Здесь можно увидеть, как устроены большие игры и что происходит, когда план доходит до конца.</p><p>В центре проекта — <strong>Europa Universalis, Kenshi, Victoria 3 и Hearts of Iron IV</strong>. Отдельная большая тема — <strong>«Алабуга Политех»</strong>: практическое образование и начало карьеры в Елабуге.</p></div>
+            <h2>ЮМОР, СТРАТЕГИИ<br />И <em>АНИМЕ.</em></h2>
+            <div className="intro-copy"><p>Канал о юморе, стратегиях и аниме. Здесь интересно не только продумать план, но и посмотреть, как он ломается в реальном времени.</p><p>В центре проекта — <strong>Europa Universalis, Kenshi, Victoria 3, Hearts of Iron IV, Dota 2 и Hearthstone</strong>. Отдельная большая тема — <strong>«Алабуга Политех»</strong>: практическое образование и начало карьеры в Елабуге.</p></div>
           </div>
         </section>
 
@@ -190,7 +192,7 @@ function App() {
 
         <section className="section games-section" id="games">
           <div className="section-kicker"><span>03</span> Игры</div>
-          <div className="games-heading"><h2>ПЯТЬ ИГР.<br /><em>ПЯТЬ РАЗНЫХ</em><br />СИСТЕМ.</h2><p>Выбирай игру и смотри, за счёт чего она работает. Никаких декоративных карточек — только реальные механики и последствия.</p></div>
+          <div className="games-heading"><h2>СЕМЬ ИГР.<br /><em>СЕМЬ РАЗНЫХ</em><br />СИСТЕМ.</h2><p>Выбирай игру и смотри, за счёт чего она работает: от карточных комбинаций и командной карты до экономики, политики и альтернативной истории.</p></div>
           <div className="game-explorer">
             <div className="game-tabs" role="tablist" aria-label="Любимые игры">{games.map((game) => <button key={game.id} className={activeGame === game.id ? 'active' : ''} onClick={() => setActiveGame(game.id)} role="tab" aria-selected={activeGame === game.id}><span>{game.short}</span><b>{game.name}</b><ArrowRight size={17} /></button>)}</div>
             <div className="game-panel" key={selectedGame.id}><div className="game-panel-mark">{selectedGame.short}</div><div className="game-panel-copy"><span>В ФОКУСЕ</span><h3>{selectedGame.name}</h3><p className="game-tagline">{selectedGame.tagline}</p><p>{selectedGame.description}</p><small>{selectedGame.detail}</small></div><Gamepad2 className="game-watermark" size={190} strokeWidth={.5} /></div>
@@ -226,7 +228,7 @@ function App() {
         </section>
 
         <section className="section final-cta">
-          <div className="section-kicker"><span>09</span> Ещё один выпуск</div><div className="final-cta-inner"><div><h2>ВЫБЕРИ<br /><em>СЛЕДУЮЩУЮ</em><br />ТЕМУ.</h2><p>Europa Universalis, Kenshi, Victoria 3, HOI4 или «Алабуга Политех» — можно начать с любой.</p></div><div className="final-buttons"><button onClick={() => setActiveVideo(videos[0])}><Play size={19} fill="currentColor" /> YouTube</button><a href="https://www.twitch.tv/lehastroff" target="_blank" rel="noreferrer"><Twitch size={19} /> Twitch</a><a href="https://t.me/LehaSTR0" target="_blank" rel="noreferrer"><Send size={19} /> Telegram</a></div></div>
+          <div className="section-kicker"><span>09</span> Ещё один выпуск</div><div className="final-cta-inner"><div><h2>ВЫБЕРИ<br /><em>СЛЕДУЮЩУЮ</em><br />ТЕМУ.</h2><p>Стратегии, аниме, Dota 2, Hearthstone, альтернативная история или «Алабуга Политех» — можно начать с любой.</p></div><div className="final-buttons"><button onClick={() => setActiveVideo(videos[0])}><Play size={19} fill="currentColor" /> YouTube</button><a href="https://www.twitch.tv/lehastroff" target="_blank" rel="noreferrer"><Twitch size={19} /> Twitch</a><a href="https://t.me/LehaSTR0" target="_blank" rel="noreferrer"><Send size={19} /> Telegram</a></div></div>
         </section>
       </main>
 
