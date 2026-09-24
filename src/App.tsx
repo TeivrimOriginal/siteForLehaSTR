@@ -159,7 +159,7 @@ function App() {
           <div className="hero-visual">
             <div className="portrait-frame">
               <div className="portrait-top"><span>LEHASTR</span><span>RU</span></div>
-              <img src="/assets/leha-avatar.jpg" alt="Аватар LehaSTR" />
+              <img src={`${import.meta.env.BASE_URL}assets/leha-avatar.jpg`} alt="Аватар LehaSTR" />
               <div className="portrait-caption"><span>LEHA</span><strong>STR</strong></div>
               <div className="portrait-status"><CircleDot size={14} /> КАНАЛ О СЛОЖНЫХ ИГРАХ</div>
             </div>
@@ -182,7 +182,7 @@ function App() {
           <div className="section-heading"><div><div className="section-kicker"><span>02</span> Видео и моменты</div><h2>ПОСЛЕДНИЕ<br /><span>ВЫПУСКИ.</span></h2></div><div className="video-heading-links"><a className="text-link" href="https://www.youtube.com/@Leha_STR/videos" target="_blank" rel="noreferrer">Все выпуски <ArrowUpRight size={18} /></a><a className="text-link" href="https://www.youtube.com/channel/UC2qDQ6o1ZWATo1Sr_7lzCcg" target="_blank" rel="noreferrer">Моменты <ArrowUpRight size={18} /></a></div></div>
           <div className="video-grid">
             {videos.map((video, index) => <article className="video-card" key={video.id}>
-              <button className="video-image" onClick={() => setActiveVideo(video)}><img src={video.image} alt="" /><span className="video-tag">{video.tag}</span><span className="video-index">0{index + 1}</span><span className="play-button" aria-hidden="true"><Play size={25} fill="currentColor" /></span><span className="sr-only">Смотреть: {video.title}</span></button>
+              <button className="video-image" onClick={() => setActiveVideo(video)}><img src={`${import.meta.env.BASE_URL}assets/${video.image.replace('assets/', '')}`} alt="" /><span className="video-tag">{video.tag}</span><span className="video-index">0{index + 1}</span><span className="play-button" aria-hidden="true"><Play size={25} fill="currentColor" /></span><span className="sr-only">Смотреть: {video.title}</span></button>
               <div className="video-meta"><h3>{video.title}</h3><p>{video.caption}</p></div>
             </article>)}
           </div>
@@ -204,7 +204,7 @@ function App() {
             <div className="alabuga-quick-facts"><div><MapPin size={22} /><span>Елабуга, Татарстан</span><small>ОЭЗ «Алабуга»</small></div><div><Zap size={22} /><span>Практика с первых дней</span><small>на реальном оборудовании</small></div><div><GraduationCap size={22} /><span>Ориентация на профессию</span><small>корпоративное обучение</small></div></div>
           </div>
 
-          <div className="alabuga-feature"><div className="alabuga-image"><img src="/assets/alabuga-main.jpg" alt="Интерьер Алабуга Политех" /><div className="image-caption"><span>АЛАБУГА / POLITECH</span><span>ЕЛАБУГА</span></div></div><div className="alabuga-feature-copy"><span className="feature-label">01 / ЧТО ЭТО</span><h3>Место, где теория<br /><em>сразу</em> получает<br />практический смысл.</h3><p>Важны не только программа на бумаге, но и среда: лаборатории, инфраструктура, проектная работа и связь с производством. Так проще понять, зачем ты получаешь профессию.</p><a className="text-link" href="https://polytech.alabuga.ru/" target="_blank" rel="noreferrer">Официальный сайт <ExternalLink size={17} /></a></div></div>
+          <div className="alabuga-feature"><div className="alabuga-image"><img src={`${import.meta.env.BASE_URL}assets/alabuga-main.jpg`} alt="Интерьер Алабуга Политех" /><div className="image-caption"><span>АЛАБУГА / POLITECH</span><span>ЕЛАБУГА</span></div></div><div className="alabuga-feature-copy"><span className="feature-label">01 / ЧТО ЭТО</span><h3>Место, где теория<br /><em>сразу</em> получает<br />практический смысл.</h3><p>Важны не только программа на бумаге, но и среда: лаборатории, инфраструктура, проектная работа и связь с производством. Так проще понять, зачем ты получаешь профессию.</p><a className="text-link" href="https://polytech.alabuga.ru/" target="_blank" rel="noreferrer">Официальный сайт <ExternalLink size={17} /></a></div></div>
 
           <div className="directions section-shell">
             <div className="section-kicker"><span>05</span> С чего начать</div>
@@ -215,7 +215,7 @@ function App() {
 
           <div className="trip-section section-shell"><div className="trip-copy"><div className="section-kicker"><span>07</span> Практический план</div><h2>СОБРАТЬСЯ<br />И <em>ПОЕХАТЬ.</em></h2><p>Не поездка за впечатлениями, а способ проверить, подходит ли тебе формат. Перед поездкой лучше собрать факты и не принимать решение по красивому баннеру.</p><a className="primary-button" href="https://polytech.alabuga.ru/directions/" target="_blank" rel="noreferrer">Изучить направления <ArrowUpRight size={18} /></a></div><div className="steps-card">{steps.map((step, index) => <button key={step.title} onClick={() => setTripDone((current) => current === index ? -1 : index)} className={tripDone === index ? 'done' : ''}><span className="step-number">0{index + 1}</span><span className="step-content"><strong>{step.title}</strong><small>{step.text}</small></span><span className="step-check">{tripDone === index ? <Check size={16} /> : <CircleDot size={15} />}</span></button>)}<div className="steps-progress"><span>ОТМЕЧЕНО: {tripDone + 1}/4</span><div><i style={{ width: `${tripDone >= 0 ? ((tripDone + 1) / 4) * 100 : 0}%` }} /></div></div></div></div>
 
-          <div className="alabuga-photos section-shell"><div className="photo-large"><img src="/assets/alabuga-room.jpg" alt="Комната в общежитии Алабуга Политех" /><span>ЖИЗНЬ В КОМПЛЕКСЕ</span></div><div className="photo-small"><img src="/assets/alabuga-stairs.jpg" alt="Архитектура кампуса Алабуга Политех" /><span>СРЕДА ДЛЯ РАБОТЫ</span></div></div>
+          <div className="alabuga-photos section-shell"><div className="photo-large"><img src={`${import.meta.env.BASE_URL}assets/alabuga-room.jpg`} alt="Комната в общежитии Алабуга Политех" /><span>ЖИЗНЬ В КОМПЛЕКСЕ</span></div><div className="photo-small"><img src={`${import.meta.env.BASE_URL}assets/alabuga-stairs.jpg`} alt="Архитектура кампуса Алабуга Политех" /><span>СРЕДА ДЛЯ РАБОТЫ</span></div></div>
         </section>
 
         <section className="section socials-section" id="socials">
