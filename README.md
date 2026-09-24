@@ -1,4 +1,4 @@
-# LehaSTR — fan/blog landing
+# SiteForLehaSTR
 
 Одностраничный адаптивный сайт-портфолио о YouTube/Twitch-блогере **LehaSTR (Lehastroff)**.
 
