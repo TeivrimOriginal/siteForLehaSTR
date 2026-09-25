@@ -15,7 +15,6 @@ import {
   Menu,
   MonitorPlay,
   Play,
-  Radio,
   Send,
   Target,
   Twitch,
@@ -167,6 +166,7 @@ function App() {
             </div>
             <div className="floating-chip chip-games"><Gamepad2 size={18} /><span>ИГРЫ</span><b>07</b></div>
             <div className="floating-chip chip-alabuga"><GraduationCap size={19} /><span>АЛАБУГА</span><b>ПОЛИТЕХ</b></div>
+            <div className="mobile-social-hint" aria-hidden="true"><span>ЛИСТАТЬ ВНИЗ</span><ArrowDown size={15} /></div>
           </div>
         </section>
 
