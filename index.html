@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#080b08" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="LehaSTR" />
     <meta name="description" content="LehaSTR — канал о юморе, стратегиях и аниме: Europa Universalis, Kenshi, Victoria 3, Hearts of Iron IV, Dota 2, Hearthstone и Алабуга Политех." />
     <meta name="keywords" content="LehaSTR, Lehastroff, юмор, аниме, стратегии, Europa Universalis, Kenshi, Victoria 3, HOI4, Dota 2, Hearthstone, Алабуга Политех" />
     <meta name="author" content="LehaSTR" />
@@ -14,21 +18,43 @@
     <meta property="og:title" content="LehaSTR — стратегии, брейнроут, Алабуга" />
     <meta property="og:description" content="Канал о юморе, стратегиях и аниме." />
     <meta property="og:url" content="https://teivrimoriginal.github.io/siteForLehaSTR/" />
-    <meta property="og:image" content="https://teivrimoriginal.github.io/siteForLehaSTR/assets/video-europa.jpg" />
+    <meta property="og:image" content="https://teivrimoriginal.github.io/siteForLehaSTR/assets/og-cover.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="LehaSTR — стратегии, брейнроут, Алабуга" />
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="LehaSTR — стратегии, брейнроут, Алабуга" />
     <meta name="twitter:description" content="Канал о юморе, стратегиях и аниме." />
-    <meta name="twitter:image" content="https://teivrimoriginal.github.io/siteForLehaSTR/assets/video-europa.jpg" />
+    <meta name="twitter:image" content="https://teivrimoriginal.github.io/siteForLehaSTR/assets/og-cover.jpg" />
 
     <link rel="canonical" href="https://teivrimoriginal.github.io/siteForLehaSTR/" />
-    <link rel="icon" type="image/svg+xml" href="/siteForLehaSTR/favicon.svg" />
+    <link rel="manifest" href="./manifest.webmanifest" />
+    <link rel="alternate" type="application/rss+xml" title="LehaSTR RSS" href="./feed.xml" />
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <link rel="apple-touch-icon" href="./assets/icon-192.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Unbounded:wght@600;700;800&display=swap" rel="stylesheet" />
     <title>LehaSTR — стратегии, брейнроут, Алабуга</title>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "LehaSTR",
+        "alternateName": ["Lehastroff", "Leha STR"],
+        "url": "https://teivrimoriginal.github.io/siteForLehaSTR/",
+        "description": "Канал о юморе, стратегиях и аниме.",
+        "sameAs": [
+          "https://www.youtube.com/@Leha_STR",
+          "https://www.twitch.tv/lehastroff",
+          "https://t.me/LehaSTR0"
+        ]
+      }
+    </script>
   </head>
   <body>
+    <noscript><div style="margin:16px;padding:16px;color:#eff4e2;background:#153d25;border:1px solid #b9e83d;font:16px system-ui,sans-serif">Включи JavaScript, чтобы открыть интерактивные разделы сайта.</div></noscript>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>

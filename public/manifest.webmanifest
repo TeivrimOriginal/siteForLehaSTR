@@ -1,0 +1,53 @@
+{
+  "id": "/siteForLehaSTR/",
+  "name": "LehaSTR — стратегии, брейнроут, Алабуга",
+  "short_name": "LehaSTR",
+  "description": "Канал о юморе, стратегиях и аниме. Europa Universalis, Kenshi, Victoria 3, HOI4, Dota 2, Hearthstone и Алабуга Политех.",
+  "lang": "ru",
+  "dir": "ltr",
+  "start_url": "/siteForLehaSTR/",
+  "scope": "/siteForLehaSTR/",
+  "display": "standalone",
+  "display_override": ["window-controls-overlay", "standalone", "minimal-ui"],
+  "orientation": "portrait-primary",
+  "background_color": "#080b08",
+  "theme_color": "#080b08",
+  "categories": ["entertainment", "games", "education"],
+  "icons": [
+    {
+      "src": "/siteForLehaSTR/assets/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/siteForLehaSTR/assets/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Новые выпуски",
+      "short_name": "Выпуски",
+      "description": "Открыть выпуски LehaSTR на YouTube",
+      "url": "https://www.youtube.com/@Leha_STR/videos",
+      "icons": [{ "src": "/siteForLehaSTR/assets/icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Прямой эфир",
+      "short_name": "Twitch",
+      "description": "Открыть канал LehaSTR в Twitch",
+      "url": "https://www.twitch.tv/lehastroff",
+      "icons": [{ "src": "/siteForLehaSTR/assets/icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Новости",
+      "short_name": "Telegram",
+      "description": "Открыть Telegram LehaSTR",
+      "url": "https://t.me/LehaSTR0",
+      "icons": [{ "src": "/siteForLehaSTR/assets/icon-192.png", "sizes": "192x192" }]
+    }
+  ]
+}

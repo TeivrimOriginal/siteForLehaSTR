@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>LehaSTR — стратегии, брейнроут, Алабуга</title>
+    <link>https://teivrimoriginal.github.io/siteForLehaSTR/</link>
+    <description>Канал о юморе, стратегиях и аниме.</description>
+    <language>ru</language>
+    <lastBuildDate>Fri, 25 Sep 2026 00:00:00 GMT</lastBuildDate>
+    <item>
+      <title>Я запретил войну в Europa Universalis 5</title>
+      <link>https://www.youtube.com/watch?v=oBYJaDag7VQ</link>
+      <guid isPermaLink="false">lehastr-oBYJaDag7VQ</guid>
+      <description>Новый грандиозный поход без единой единицы.</description>
+    </item>
+    <item>
+      <title>Гей-парк в Jurassic World Evolution</title>
+      <link>https://www.youtube.com/watch?v=Gc2mKjtLXlE</link>
+      <guid isPermaLink="false">lehastr-Gc2mKjtLXlE</guid>
+      <description>Короткий момент с канала «Моменты LehaSTR».</description>
+    </item>
+    <item>
+      <title>Идеальное прохождение Kenshi</title>
+      <link>https://www.youtube.com/watch?v=YjAIdOqOhK4</link>
+      <guid isPermaLink="false">lehastr-YjAIdOqOhK4</guid>
+      <description>Леха показывает свой план прохождения.</description>
+    </item>
+    <item>
+      <title>Мохаве больше не будет прежней</title>
+      <link>https://www.youtube.com/watch?v=ZWxDbambNGY</link>
+      <guid isPermaLink="false">lehastr-ZWxDbambNGY</guid>
+      <description>Хардкорный отыгрыш за Сирию в Hearts of Iron IV.</description>
+    </item>
+  </channel>
+</rss>
