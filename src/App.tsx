@@ -278,8 +278,8 @@ function App() {
             </div>
           </div>
           <div className="figures-grid">
-            {figures.map((figure, index) => <article className={`figure-card figure-card-${index + 1}`} key={figure.name}>
-              <div className="figure-card-top"><span>0{index + 1}</span><Crown size={18} /></div>
+            {figures.map((figure) => <article className="figure-card" key={figure.name}>
+              <Crown className="figure-crown" size={18} />
               <div className="figure-avatar" aria-hidden="true">{figure.mark}</div>
               <h3>{figure.name}</h3>
               <p>В списке</p>

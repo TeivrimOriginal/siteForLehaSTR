@@ -272,9 +272,8 @@ img { display: block; max-width: 100%; }
 .figures-grid { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 12px; }
 .figure-card { min-height: 265px; display: flex; flex-direction: column; padding: 18px; color: var(--ink); background: rgba(8,11,8,.72); border: 1px solid var(--line-strong); transition: transform .25s, border-color .25s, background .25s; }
 .figure-card:hover { transform: translateY(-7px); background: var(--black); border-color: var(--orange); }
-.figure-card-top { display: flex; align-items: center; justify-content: space-between; color: var(--orange); font-family: 'Unbounded'; font-size: 9px; }
-.figure-card-top svg { color: var(--green-bright); }
-.figure-avatar { width: 68px; height: 68px; display: grid; place-items: center; margin: 38px 0 19px; color: var(--black); background: var(--green-bright); border: 2px solid var(--black); box-shadow: 4px 4px 0 var(--orange); font-family: 'Unbounded'; font-size: 28px; font-weight: 800; transform: rotate(-5deg); }
+.figure-crown { align-self: flex-end; color: var(--green-bright); }
+.figure-avatar { width: 68px; height: 68px; display: grid; place-items: center; margin: 30px 0 19px; color: var(--black); background: var(--green-bright); border: 2px solid var(--black); box-shadow: 4px 4px 0 var(--orange); font-family: 'Unbounded'; font-size: 28px; font-weight: 800; transform: rotate(-5deg); }
 .figure-card:nth-child(even) .figure-avatar { color: var(--black); background: var(--orange); box-shadow: 4px 4px 0 var(--green-bright); }
 .figure-card h3 { margin: 0; color: var(--ink); font-family: 'Unbounded'; font-size: clamp(14px, 1.3vw, 19px); letter-spacing: -.04em; overflow-wrap: anywhere; }
 .figure-card p { margin: 7px 0 0; color: var(--muted); font-size: 10px; }
@@ -457,7 +456,7 @@ footer a:hover { color: var(--green-bright); }
   .figures-intro > p { font-size: 14px; }
   .figures-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
   .figure-card { min-height: 220px; padding: 15px; }
-  .figure-avatar { width: 56px; height: 56px; margin: 27px 0 15px; font-size: 23px; }
+  .figure-avatar { width: 56px; height: 56px; margin: 20px 0 15px; font-size: 23px; }
   .figure-card h3 { font-size: 14px; }
   .creator-tools-grid > * { min-height: 240px; padding: 21px; }
   .creator-tools-grid h3 { margin-top: 28px; font-size: 18px; }
