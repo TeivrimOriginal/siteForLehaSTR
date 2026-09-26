@@ -15,11 +15,13 @@ import {
   Github,
   GraduationCap,
   Layers3,
+  Laugh,
   MapPin,
   Menu,
   Play,
   Send,
   Share2,
+  Shuffle,
   Smartphone,
   Sparkles,
   Target,
@@ -98,6 +100,14 @@ const figures = [
   { name: 'владимир', mark: 'В' },
 ];
 
+const jokes = [
+  { tag: 'EU5', text: 'План: «сделаю всё идеально». Первое отклонение — соседский всадник.' },
+  { tag: 'KENSHI', text: '«Мы ещё не проигрывали» — это не план, это диагноз.' },
+  { tag: 'DOTA 2', text: 'Главный баг в Dota 2 — фраза «надо было на минуту раньше».' },
+  { tag: 'АЛАБУГА', text: 'Инструкция: «не трогайте робота». Робот сразу стал главным специалистом.' },
+  { tag: 'ДИПЛОМАТИЯ', text: 'В EU5 все доверяют друг другу — и именно поэтому никто не выигрывает.' },
+];
+
 function Brand() {
   return <a className="brand" href="#top"><span className="brand-mark" aria-hidden="true">L</span><span className="brand-text">LEHA<span>STR</span></span></a>;
 }
@@ -108,6 +118,7 @@ function App() {
   const [videoFilter, setVideoFilter] = useState<'all' | VideoKind>('all');
   const [activeGame, setActiveGame] = useState(games[0].id);
   const [activeDirection, setActiveDirection] = useState(0);
+  const [jokeIndex, setJokeIndex] = useState(0);
   const [showTop, setShowTop] = useState(false);
   const [showDock, setShowDock] = useState(false);
   const [tripDone, setTripDone] = useState<number | null>(null);
@@ -145,6 +156,7 @@ function App() {
     ['#alabuga', 'Алабуга Политех'],
     ['#socials', 'Соцсети'],
     ['#figures', 'Деятели'],
+    ['#humor', 'Шутки'],
   ];
 
   return (
@@ -287,8 +299,21 @@ function App() {
           </div>
         </section>
 
+        <section className="section humor-section" id="humor">
+          <div className="section-kicker"><span>10</span> Игровая кухня</div>
+          <div className="humor-heading">
+            <h2>ШУТКИ<br /><em>ПРО ИГРЫ</em></h2>
+            <div className="humor-intro"><p>Небольшая порция юмора про брейнроут, тактику и гаражную логику игровых систем.</p><button className="outline-button" onClick={() => setJokeIndex((current) => (current + 1) % jokes.length)}><Shuffle size={17} /> Следующая шутка</button></div>
+          </div>
+          <article className="joke-card" key={jokeIndex}>
+            <div className="joke-card-top"><span><Laugh size={18} /> {jokes[jokeIndex].tag}</span><small>0{jokeIndex + 1} / 0{jokes.length}</small></div>
+            <p>{jokes[jokeIndex].text}</p>
+            <div className="joke-card-bottom"><span>LEHASTR / GAME JOKE</span><span>БЕЗ ЛИЧНЫХ ШТУК</span></div>
+          </article>
+        </section>
+
         <section className="creator-tools section">
-          <div className="section-kicker"><span>10</span> Сайт и GitHub</div>
+          <div className="section-kicker"><span>11</span> Сайт и GitHub</div>
           <div className="creator-tools-grid">
             <article><span><Smartphone size={26} /></span><h3>Установи на телефон</h3><p>Добавь сайт на главный экран. Открывай LehaSTR как приложение и возвращайся даже при слабой сети.</p><button onClick={install}>{installed ? 'Установлено' : canInstall ? 'Установить' : 'Как установить'}</button>{installHint && <small className="install-hint">В Safari: «Поделиться» → «На экран Домой». В Chrome: меню → «Установить приложение».</small>}</article>
             <article><span><Share2 size={26} /></span><h3>Поделись</h3><p>Отправь ссылку другу одним нажатием через системное меню телефона.</p><button onClick={share}>{shared ? 'Ссылка готова' : 'Поделиться сайтом'}</button></article>
@@ -298,7 +323,7 @@ function App() {
         </section>
 
         <section className="section final-cta">
-          <div className="section-kicker"><span>11</span> Следующий выпуск</div><div className="final-cta-inner"><div><h2>ВЫБЕРИ<br /><em>СЛЕДУЮЩУЮ</em><br />ТЕМУ.</h2><p>Стратегии, аниме, Dota 2, Hearthstone, альтернативная история или «Алабуга Политех» — можно начать с любой.</p></div><div className="final-buttons"><button onClick={() => setActiveVideo(videos[0])}><Play size={19} fill="currentColor" /> YouTube</button><a href="https://www.twitch.tv/lehastroff" target="_blank" rel="noreferrer"><Twitch size={19} /> Twitch</a><a href="https://t.me/LehaSTR0" target="_blank" rel="noreferrer"><Send size={19} /> Telegram</a></div></div>
+          <div className="section-kicker"><span>12</span> Следующий выпуск</div><div className="final-cta-inner"><div><h2>ВЫБЕРИ<br /><em>СЛЕДУЮЩУЮ</em><br />ТЕМУ.</h2><p>Стратегии, аниме, Dota 2, Hearthstone, альтернативная история или «Алабуга Политех» — можно начать с любой.</p></div><div className="final-buttons"><button onClick={() => setActiveVideo(videos[0])}><Play size={19} fill="currentColor" /> YouTube</button><a href="https://www.twitch.tv/lehastroff" target="_blank" rel="noreferrer"><Twitch size={19} /> Twitch</a><a href="https://t.me/LehaSTR0" target="_blank" rel="noreferrer"><Send size={19} /> Telegram</a></div></div>
         </section>
       </main>
 
